@@ -40,19 +40,19 @@ function operate(numberOne, operator, numberTwo) {
 // Basic Math Operators functions (+, -, *, /)
 function add(numberOne, numberTwo) {
   const addOperation = numberOne + numberTwo;
-  return console.log(addOperation);
+  return (inputValues.value = addOperation);
 }
 function subtract(numberOne, numberTwo) {
   const subtractOperation = numberOne - numberTwo;
-  return console.log(subtractOperation);
+  return (inputValues.value = subtractOperation);
 }
 function multiply(numberOne, numberTwo) {
   const multiplyOperation = numberOne * numberTwo;
-  return console.log(multiplyOperation);
+  return (inputValues.value = multiplyOperation);
 }
 function divide(numberOne, numberTwo) {
   let divideOperation = (numberOne / numberTwo).toFixed(3);
-  return console.log(divideOperation);
+  return (inputValues.value = divideOperation);
 }
 
 // calling equal button
