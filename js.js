@@ -5,6 +5,19 @@ let numberOne;
 let numberTwo;
 let operator;
 
+// catching the numbers from calculator
+let buttonsNumber = document.querySelectorAll(".number");
+
+// catching the input
+let inputValues = document.querySelector("#input");
+
+// catching the numbers to be displayed in the input
+buttonsNumber.forEach((btn) => {
+  btn.addEventListener("click", function () {
+    inputValues.value += btn.innerText + " ";
+  });
+});
+
 // this take an operator and two numbers, and call one of the basic math operator function
 function operate(numberOne, operator, numberTwo) {
   if (operator === "+") {
@@ -41,3 +54,20 @@ function divide(numberOne, numberTwo) {
   let divideOperation = (numberOne / numberTwo).toFixed(3);
   return console.log(divideOperation);
 }
+
+// calling equal button
+const equalButton = document.querySelector("#equal");
+
+equalButton.addEventListener("click", function () {
+  const arrayValues = inputValues.value.split(" ");
+  numberOne = Number(arrayValues[0]);
+  numberTwo = Number(arrayValues[2]);
+  operator = arrayValues[1];
+  operate(numberOne, operator, numberTwo);
+});
+
+// calling Clear button
+const clearButton = document.querySelector("#clear");
+clearButton.addEventListener("click", function () {
+  inputValues.value = "";
+});
