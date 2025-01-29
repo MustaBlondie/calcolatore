@@ -1,4 +1,5 @@
 // CALCULATOR
+//continuare
 
 // Variables for each part of the operation
 let numberOne;
